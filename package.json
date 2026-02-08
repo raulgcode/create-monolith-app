@@ -1,6 +1,6 @@
 {
   "name": "@raulgcode/create-monolith-app",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CLI to scaffold a full-stack monorepo with NestJS, React Router, Prisma, and shadcn/ui",
   "type": "module",
   "bin": {

@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/raulgcode/create-monolith-app/compare/v1.0.0...v1.0.1) (2026-02-08)
+
+
+### Bug Fixes
+
+* replace execSync with rmSync for safer git directory removal ([5ac4213](https://github.com/raulgcode/create-monolith-app/commit/5ac42132d4467f6e9b601c8553e8a8973895738c))
+
 # 1.0.0 (2026-02-08)
 
 
