@@ -1,0 +1,37 @@
+{
+  "name": "create-monolith-app",
+  "version": "1.0.0",
+  "description": "CLI to scaffold a full-stack monorepo with NestJS, React Router, Prisma, and shadcn/ui",
+  "type": "module",
+  "bin": {
+    "create-monolith-app": "./dist/bin/create-monolith-app.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "prepublishOnly": "tsup"
+  },
+  "devDependencies": {
+    "tsup": "^8.4.0",
+    "typescript": "^5.7.0",
+    "@types/node": "^22.0.0"
+  },
+  "keywords": [
+    "monorepo",
+    "nestjs",
+    "react-router",
+    "prisma",
+    "shadcn",
+    "boilerplate",
+    "cli",
+    "scaffold"
+  ],
+  "author": "raulgcode",
+  "license": "MIT",
+  "pnpm": {
+    "onlyBuiltDependencies": ["esbuild"]
+  }
+}
