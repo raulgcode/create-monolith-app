@@ -210,11 +210,11 @@ The project is configured with GitHub Actions to automatically:
 - Create GitHub releases
 - Publish to GitHub Packages
 
-When commits are pushed to the `main` branch, the release workflow runs automatically.
+When commits are pushed to the `master` branch, the release workflow runs automatically.
 
 ## 🤝 Prerequisites
 
-- **Node.js**: 18+
+- **Node.js**: 20.8.1+
 - **pnpm**: 8+ (will be installed automatically if not present)
 - **Git**: To clone the template
 - **Docker** (optional): For PostgreSQL database
