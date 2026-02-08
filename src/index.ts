@@ -1,5 +1,5 @@
 import { execSync } from 'child_process';
-import { existsSync, readdirSync, readFileSync, writeFileSync, statSync, unlinkSync } from 'fs';
+import { existsSync, readdirSync, readFileSync, writeFileSync, statSync, unlinkSync, rmSync } from 'fs';
 import { join, resolve } from 'path';
 import { createInterface } from 'readline';
 
@@ -201,7 +201,10 @@ export async function main() {
 
   // Step 2: Remove .git and reinitialize
   step(2, totalSteps, 'Initializing git...');
-  execSync(`rm -rf "${join(projectPath, '.git')}"`, { stdio: 'pipe' });
+  const gitPath = join(projectPath, '.git');
+  if (existsSync(gitPath)) {
+    rmSync(gitPath, { recursive: true, force: true });
+  }
   execSync('git init', { stdio: 'pipe', cwd: projectPath });
   success('Git initialized.');
 
