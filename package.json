@@ -1,5 +1,5 @@
 {
-  "name": "create-monolith-app",
+  "name": "@raulgcode/create-monolith-app",
   "version": "1.0.0",
   "description": "CLI to scaffold a full-stack monorepo with NestJS, React Router, Prisma, and shadcn/ui",
   "type": "module",
@@ -12,9 +12,20 @@
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
-    "prepublishOnly": "tsup"
+    "prepublishOnly": "tsup",
+    "semantic-release": "semantic-release"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/raulgcode/create-monolith-app.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   },
   "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "semantic-release": "^23.0.0",
     "tsup": "^8.4.0",
     "typescript": "^5.7.0",
     "@types/node": "^22.0.0"
@@ -32,6 +43,8 @@
   "author": "raulgcode",
   "license": "MIT",
   "pnpm": {
-    "onlyBuiltDependencies": ["esbuild"]
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
   }
 }
